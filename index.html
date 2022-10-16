@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Lato&family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    <link rel="stylesheet" href="/styles.css">
+    <title>Sparzly Food</title>
+</head>
+<body>
+
+    <!-- Start of Header -->
+    <div class="menu1">
+    <section class="header">
+        <nav class="navigation" role="navigation">
+            <input type="checkbox" id="toggle" />
+            <label class="hamburger" for="toggle">
+                <div class="top"></div>
+                <div class="meat"></div>
+                <div class="bottom"></div>
+            </label>
+
+        <nav class="navbar">
+                <a class="nav-list" href="#">Home</a>
+                <a class="nav-list" href="#menu">Menu</a>
+                <a class="nav-list" href="#about">About</a>
+                <a class="nav-list" href="#review">Review</a>
+                <a class="nav-list" href="#contact">Contact</a>
+        </nav>
+        </nav>
+    </section>
+
+        <h3 class="logo">Sparzly</h3>
+        <div class="cart-items"><i class="fa-solid fa-cart-shopping"></i>0</div>
+        </div>
+        <div class="cart-overlay">
+            <div class="cart">
+                <span class="close-cart">
+                    <i class="fas fa-window-close"></i>
+                </span>
+                <h2>Your Cart</h2>
+                <div class="cart-content">
+                    <div class="cart-items">
+                        <img src="./images/Cocktail.jpeg" alt="product" />
+                        <div>
+                            <h4>Cocktail</h4>
+                            <h5>$10.00</h5>
+                            <span class="remove-item">remove</span>
+                        </div>
+                        <div>
+<i class="fas fa-chevron-up"></i>
+<p class="item-amount">1</p>
+<i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-footer">
+                    <h3>your total : $ <span class="cart-total">0</span></h3>
+                </div>
+            </div>
+        </div>
+ <!-- End of Header -->
+
+  <!-- Start of Homepage -->
+  
+        <div class="text">
+    <h1>Garlic Butter Steak with Zucchini Noodles</h1>
+</div>
+
+<!-- End of Hompage -->
+
+<!-- Start of Product Categories -->
+
+<div class="product-categories"> 
+    <h1 id="menu">EXPLORE OUR ONLINE STORE</h1>
+    <p>40% DISCOUNT ON EVERY ORDER</p>
+</div>
+<div class="gallery">
+<div class="one">
+    <a href="#" class="view-btn">CHICKENS</a></div>
+
+<div class="two">
+    <a href="#" class="view-btn">NOODLES</a></div>
+
+<div class="three">
+    <a href="#" class="view-btn">POTATOES</a></div>
+
+<div class="four">
+    <a href="#" class="view-btn">PASTA</a></div>
+
+<div class="five">
+    <a href="#" class="view-btn">DESERTS</a></div>
+
+<div class="six">
+        <a href="#" class="view-btn">JOLLOF RICE</a></div>
+
+        <div class="seven">
+            <a href="#" class="view-btn">KOREAN DELICACIES</a></div>
+        
+        <div class="eight">
+                <a href="#" class="view-btn">NACHOES</a></div>
+</div>
+
+<section class="product-center">
+        <h3 id="features">FEATURED PRODUCTS</h3>
+    <div class="features">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <div class="slides">
+               <div id="overflow">
+                  <div class="inner">
+                     <div class="slide slide_1">
+                        <div class="features-img">
+                            <img src="./images/Icecream.jpeg" alt="icecream" class="images">
+                        <p class="upperp">Lusheey Icecream</p>
+                        <p class="lowerp">$7.5</p>
+                        <button class="feature-btn"><a href="#">Add To Cart</a></button>
+                        </div>
+                     </div>
+                     <div class="slide slide_2">
+                        <div class="features-img">
+                            <img src="./images/Smoothie.jpeg" alt="smoothie" class="images">
+                        <p class="upperp">Lusheey Smoothie</p>
+                        <p class="lowerp">$8.5</p>
+                        <button class="feature-btn"><a href="#">Add To Cart</a></button>
+                        </div>
+            
+                     </div>
+                     <div class="slide slide_3">
+                        <div class="features-img">
+                            <img src="./images/Milkshake.jpeg" alt="milkshake" class="images">
+                        <p class="upperp">Lusheey Milkshake</p>
+                        <p class="lowerp">$5.5</p>
+                        <button class="feature-btn"><a href="#">Add To Cart</a></button>
+                        </div>
+                     </div>
+                     <div class="slide slide_4">
+                        <div class="features-img">
+                            <img src="./images/Lemonade.jpeg" alt="lemonade" class="images">
+                        <p class="upperp">Lusheey Lemonade</p>
+                        <p class="lowerp">$10</p>
+                        <button class="feature-btn"><a href="#">Add To Cart</a></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="controls">
+               <label for="slide1"></label>
+               <label for="slide2"></label>
+               <label for="slide3"></label>
+               <label for="slide4"></label>
+            </div>
+            <div id="bullets">
+               <label for="slide1"></label>
+               <label for="slide2"></label>
+               <label for="slide3"></label>
+               <label for="slide4"></label>
+            </div>
+         </div>
+
+            <!-- End of Product Categories -->
+
+            <!-- Start of Review -->
+            
+            <h3 class="review-text" id="review">CUSTOMER'S REVIEW</h3>
+            <div class="review">
+                <div class="each-review">
+                    <i class="fa-solid fa-circle-user"></i>
+<h3>Adam Durban</h3>
+<p>Portharcourt, Nigeria</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolore?</p>
+</div>
+
+<div class="each-review">
+    <i class="fa-solid fa-circle-user"></i>
+<h3>Adesanya Mariam</h3>
+<p>Lagos, Nigeria</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolore?</p>
+</div>
+
+<div class="each-review">
+    <i class="fa-solid fa-circle-user"></i>
+<h3>Debby</h3>
+<p>Ibadan, Nigeria</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolore?</p>
+</div>
+            </div>
+                        <!-- End of Review -->
+
+<!-- Start of About Us -->            
+<div class="about-sparz">
+    <div>
+        <img src="./images/vector2.jpeg" alt="vector" width="600px" height="750px" class="about-image">
+    </div>
+    <div class="about-code">
+        <h3 id="about">ABOUT SPARZLY FOODS</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae placeat voluptate laborum aspernatur totam aliquid a, perferendis deserunt porro. Illo quibusdam harum non cum quidem natus nostrum obcaecati quasi nesciunt necessitatibus sequi molestiae fugit, animi quo sunt dignissimos architecto consequatur. Molestiae suscipit rem nemo ad minus atque assumenda, quibusdam nisi!</p>
+        <a href="www.google.com" class="about-btn">Learn More...</a>
+    </div>
+    </div>
+
+<!-- End of About Us -->            
+
+<!-- Start of Contact -->
+            
+<div class="contact-field">
+    <div class="contain">
+       <h4>Locations</h4>
+        <p>Lagos</p>
+        <p>Ibadan</p>
+        <p>Portharcourt</p>
+    </div>
+
+    <div class="contain">
+        <h4>Quicklinks</h4>
+        <p><a href="#">Home</a></p>
+<p><a href="#features">Features</a></p>
+<p><a href="#review">Review</a></p>
+    </div>
+
+    <div class="contain">
+        <h4>Contact</h4>
+        <p>+234 90** *** ***</p>
+        <p>+234 9000 *** ***</p>
+        <p>sparzly.food@gmail.com</p>
+        <p>KM 14, Eti Osa, Lagos, Nigeria</p>
+    </div>
+
+    <div class="contain">
+        <h4>Follow Us</h4>
+        <p><a href="https://www.twitter.com">Twitter</a></p>
+        <p><a href="https://www.instagram.com">Instagram</a></p>
+        <p><a href="https://www.linkdeln.com">Linkdlen</a></p>
+    </div>
+</div>
+            <!-- End of Review -->
+</body>
+</html>

@@ -1,0 +1,595 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+font-family: 'Roboto', sans-serif;
+}
+
+.menu1 {
+  display: flex;
+justify-content:space-around;
+position: fixed;
+color: #fff;
+background-color: #061735;
+width: 100%;
+}
+
+.header {
+color: black;
+}
+
+.hamburger {
+  width: 20px;
+  height: 1px;
+  margin: 10px;
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  z-index: 120;
+}
+
+.hamburger div {
+  background-color: white;
+  position: relative;
+  width: 30px;
+  height: 5px;
+  margin-top: 7px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked + .hamburger .top {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 12px;
+}
+
+#toggle:checked + .hamburger .meat {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: -5px;
+}
+
+#toggle:checked + .hamburger .bottom {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+#toggle:checked ~ .navbar {
+  height: 340px;
+}
+
+.navbar {
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: 1fr repeat(4, 0.5fr);
+  grid-row-gap: 25px;
+  padding: 0;
+  list-style: none;
+  clear: both;
+  width: auto;
+  text-align: center;
+  height: 0px;
+  overflow: hidden;
+  transition: height .4s ease;
+  z-index: 120;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+}
+
+.navbar a:first-child {
+  margin-top: 40px;
+}
+
+.navbar a:last-child {
+  margin-bottom: 40px;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 10px 0;
+  font: 700 20px 'Oswald', sans-serif;
+}
+
+.nav-list:hover {
+  background-color: #fff;
+  color: rgb(61, 61, 61);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.logo {
+padding-top: 20px;
+font-family: 'BioRhyme', serif;
+}
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+  background: rgb(240, 157, 81, 0.5);
+  z-index: 2;
+  visibility: hidden;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 3;
+  background: rgb(231, 226, 221);
+  padding: 1.5rem;
+  transition: all 0.3s linear;
+  transform: translateX(100%);
+}
+.showCart {
+  transform: translateX(0);
+}
+
+.transparentBcg {
+  visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+
+.close-cart {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.cart h2 {
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 2rem;
+}
+
+.cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.cart-item img {
+  width: 75px;
+  height: 75px;
+}
+
+.cart-item h4 {
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+
+.cart-item h5 {
+  margin: 0.5rem 0;
+  letter-spacing: var(--mainSpacing);
+}
+
+.item-amount {
+  text-align: center;
+}
+
+.remove-item {
+  color: grey;
+  cursor: pointer;
+}
+
+.fa-chevron-up,
+.fa-chevron-down {
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+
+.cart-footer {
+  margin-top: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+.cart-footer h3 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+i {
+    padding-top: 20px;
+}
+
+.cart-items {
+   right: 1px;
+}
+
+
+.text {
+  max-width: 2440px;
+  height: 740px;
+  top: 22px;
+    background-image: url(./images/Garlic\ Butter\ Steak\ Bites\ with\ Lemon\ Zucchini\ Noodles.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-shrink: 0;
+}
+
+.text h1{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #FFFFFF;
+    font-size: 70px;
+    background-color: red;
+    box-sizing: border-box;
+}
+
+.product-categories {
+  text-align: center;
+}
+
+.product-categories h1{
+  padding-top: 5rem;
+}
+
+.product-categories p {
+  padding-top: 10px;
+}
+
+.gallery {
+  display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2em 2em;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.one {
+  background-image: url(./images/Baked\ Honey\ BBQ\ Popcorn\ Chicken.jpeg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding-left: 7rem;
+  padding-top: 15rem;
+}
+
+.two {
+  background-image: url(./images/Rabokki.jpeg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding-left: 7rem;
+  padding-top: 15rem;
+}
+
+.three {
+  background-image: url(./images/Pierogi\ with\ Potato\ and\ Sauerkraut.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding-left: 7rem;
+  padding-top: 15rem;
+}
+
+.four {
+  background-image: url(./images/Spaghetti\ &\ Spinach\ with\ Sun-Dried\ Tomato\ Cream\ Sauce.jpeg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding-left: 7rem;
+  padding-top: 15rem;
+}
+
+.five {
+  background-image: url(./images/Traditional\ Fluffy\ Japanese\ Souffle\ Pancakes.jpeg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding-left: 7rem;
+  padding-top: 15rem;
+}
+
+.six {
+  background-image: url(./images/Jollof\ rice\ and\ peppered\ beef.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding-left: 7rem;
+  padding-top: 15rem;
+}
+
+.seven {
+  background-image: url(./images/Bibimbap!\ \(Korean\ Rice\ Bowl\).png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding-left: 7rem;
+  padding-top: 15rem;
+}
+
+.eight {
+  background-image: url(./images/Crockpot\ creamy\ chicken\ nachos.jpeg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding-left: 7rem;
+  padding-top: 15rem;
+}
+
+.view-btn {
+ 
+ padding-top: 10rem;
+}
+
+ 
+
+.product-center h3 {
+text-align: center;
+padding-bottom: 2rem;
+padding-top: 4rem;
+}
+
+.features {
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.features input[type=radio] {
+  display: none;
+}
+
+.features label {
+  cursor:pointer;
+  text-decoration: none;
+}
+
+.slides {
+  padding: 10px;
+  position: static;
+
+}
+#overflow {
+  width: 100%;
+  height: 405px;
+  overflow: hidden;
+}
+#slide1:checked ~ .slides .inner {
+  margin-left: 0;
+}
+#slide2:checked ~ .slides .inner {
+  margin-left: -100%;
+}
+#slide3:checked ~ .slides .inner {
+  margin-left: -200%;
+}
+#slide4:checked ~ .slides .inner {
+  margin-left: -300%;
+}
+.slides .inner {
+  transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  width: 400%;
+  line-height: 0;
+  height: 100%;
+}
+.slides .slide {
+  width: 25%;
+  float:left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+
+#controls {
+  margin: -180px 0 0 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  position: relative;
+}
+#controls label {
+  transition: opacity 0.2s ease-out;
+  display: none;
+  width: 50px;
+  height: 50px;
+  opacity: .4;
+}
+#controls label:hover {
+  opacity: 1;
+}
+
+#bullets {
+  margin: 150px 0 0;
+  text-align: center;
+}
+#bullets label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius:100%;
+  background: #ccc;
+  margin: 0 10px;
+}
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+  background: #444;
+}
+
+.images{
+  width: 305px;
+  height: 307px;
+  flex-shrink: 0;
+}
+
+.upperp {
+  padding-left: 25px;
+  padding-top: 15px;
+  color: #000;
+}
+
+.lowerp {
+  padding-left: 2rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #000;
+}
+
+.feature-btn {
+text-align: center;
+align-items: center;
+  width: 160px;
+  height: 40px;
+  color: #FFFFFF;
+ background-color: #061735;
+  border-radius: 0;
+}
+
+.feature-btn a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.feature-btn a:hover {
+  color: white;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.review {
+  display: flex;
+  justify-content: space-around;
+}
+
+.each-review {
+  width: 303px;
+  height: 309px;
+  border-radius: 0;
+  background-color: #b6e5fc;
+  text-align: center;
+  box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgb(94, 96, 121);
+}
+
+.each-review > i.fa-solid.fa-circle-user, h3, p {
+padding-bottom: 2px;
+
+}
+
+.review-text {
+  text-align: center;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  color: #061735;
+  }
+
+.about-sparz {
+  display: flex;
+  justify-content: space-between;
+}
+
+i.fa-solid.fa-circle-user {
+  font-size: 55px;
+   right: 60px;
+   padding: 0;
+   margin-top: -100px;
+   border-radius: 70px;
+}
+
+.about-image {
+padding: 5rem 0 5rem 0;
+flex-shrink: 0;
+}
+
+.about-code {
+  padding: 15rem 0 7rem 0;
+}
+
+  .about-code h3 {
+    padding-top: 2rem; 
+    padding-bottom: 2rem;
+    color: #061735;
+    text-align: center;
+  }
+
+  .about-code p { 
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  .about-btn {
+        color: #FFFFFF;
+       background-color: #061735;
+        padding: 10px 15px;
+        outline: 3px solid black;
+  }
+    
+    .about-code a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    
+    .about-btn a:hover {
+        color: white;
+        cursor: pointer;
+    }
+
+
+    .contact-field {
+      display: flex;
+      justify-content: space-around;
+      background-color: #d8d8d8;
+    }
+  
+    .contain {
+      width: 303px;
+      height: 302px;
+      border-radius: 0;
+      padding-left: 25px;
+    }
+    
+    .contain h4 {
+       padding: 10px 0 10px 0;
+      }
+      
+      .contain p {
+  padding-top: 10px;
+}
+
+.contain a {
+        text-decoration: none;
+        color: #000000;
+    }
+    
+    .contain a:hover {
+        color: red;
+        cursor: pointer;
+    }
+      
+  
+
