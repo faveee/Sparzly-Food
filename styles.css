@@ -129,6 +129,7 @@ font-family: 'BioRhyme', serif;
   z-index: 2;
   visibility: hidden;
 }
+
 .cart {
   position: fixed;
   top: 0;
@@ -229,8 +230,7 @@ i {
 
 .text {
   max-width: 2440px;
-  height: 740px;
-  top: 22px;
+  height: 700px;
     background-image: url(./images/Garlic\ Butter\ Steak\ Bites\ with\ Lemon\ Zucchini\ Noodles.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -238,12 +238,16 @@ i {
 }
 
 .text h1{
-    margin-left: 5px;
-    margin-right: 5px;
-    color: #FFFFFF;
-    font-size: 70px;
-    background-color: red;
-    box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  height: 15%;
+  backdrop-filter: blur(90px);
+  
+    color: #000;
+    font-size: 50px;
+    
 }
 
 .product-categories {
@@ -340,11 +344,27 @@ i {
 }
 
 .view-btn {
- 
- padding-top: 10rem;
+position: absolute;
+text-align: center;
+margin-top: -140px;
+margin-left: -25px;
+width: 10%;
+backdrop-filter: blur(50px);
+padding: 15px 15px;
+background: none!important;
+border: 0;
 }
 
- 
+.view-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.view-btn a:hover {
+  color: navy;
+  cursor: pointer;
+  opacity: 0.5;
+}
 
 .product-center h3 {
 text-align: center;
